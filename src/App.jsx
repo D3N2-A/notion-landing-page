@@ -3,6 +3,8 @@ import "./App.css";
 import Nav from "./Components/Navbar";
 import Hero from "./Components/Hero";
 import Subhero from "./Components/Hero/Subhero";
+import footer from "../public/Footer/footer.webp";
+import Free from "./Components/TextSections/Free";
 
 function App() {
   return (
@@ -12,6 +14,8 @@ function App() {
         <Hero />
         <Subhero />
         <div className="spacer"></div>
+        <Free />
+        <img src={footer} alt="" className="footer-img" />
       </div>
     </div>
   );
