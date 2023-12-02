@@ -1,0 +1,32 @@
+.hero-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 80%;
+  height: fit-content;
+  gap: 1rem;
+
+  h1 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 3.83rem;
+    line-height: 61px;
+    text-wrap: balance;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  img {
+    aspect-ratio: auto 2048 / 749;
+    margin: auto;
+    display: block;
+    height: auto;
+    width: 640px;
+    height: 234px;
+    object-fit: contain;
+    margin-top: 1rem;
+  }
+}
