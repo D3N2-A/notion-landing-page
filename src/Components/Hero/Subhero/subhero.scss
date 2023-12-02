@@ -4,6 +4,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  gap: 25px;
 
   .top {
     display: flex;
@@ -73,7 +74,23 @@
   .bottom {
     transition: all 0.25s cubic-bezier(0.785, 0.135, 0.15, 0.86);
     font-size: 13.5px;
+    line-height: 19px;
   }
+}
+
+.carousel {
+  border-radius: 0.15%/2.3%;
+  box-shadow: 0px 4px 18px rgb(0 0 0/4%),
+    0px 2.025px 7.84688px rgba(0, 0, 0, 0.027), 0px 0.8px 2.925px rgb(0 0 0/2%),
+    0px 0.175px 1.04062px rgba(0, 0, 0, 0.013);
+  border: 1px solid #0000000a;
+}
+
+.svgContainer {
+  width: 32px;
+  aspect-ratio: 1/1;
+  padding: 6px;
+  border-radius: 0.315rem;
 }
 
 @keyframes pullup {
