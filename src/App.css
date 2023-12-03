@@ -21,6 +21,10 @@
   width: 100%;
   min-height: 120px;
 }
+.spacer2 {
+  width: 100%;
+  min-height: 50px;
+}
 
 .footer-img {
   width: 670px;
