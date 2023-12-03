@@ -5,6 +5,7 @@ import Hero from "./Components/Hero";
 import Subhero from "./Components/Hero/Subhero";
 import footer from "../public/Footer/footer.webp";
 import Free from "./Components/TextSections/Free";
+import Footer from "./Components/Footer";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Free />
         <img src={footer} alt="" className="footer-img" />
       </div>
+      <Footer />
     </div>
   );
 }
