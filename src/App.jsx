@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./App.css";
 import Nav from "./Components/Navbar";
 import Hero from "./Components/Hero";
@@ -10,9 +10,19 @@ import match from "../public/Testimonial/match.png";
 import Testimonial from "./Components/UI/Testimonial";
 
 function App() {
+  const [showBorder, setShowBorder] = useState(false);
+  const ref = useRef(null);
+  useEffect(() => {
+    const observer = new IntersectionObserver(([entry]) => {
+      setShowBorder(entry.isIntersecting);
+    });
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, []);
   return (
     <div className="page-container">
-      <Nav />
+      <Nav ref={ref} showBorder={showBorder} />
+      <div ref={ref}></div>
       <div className="sub">
         <Hero />
         <Subhero />

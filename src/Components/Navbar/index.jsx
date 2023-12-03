@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./index.scss";
 import icon from "../../../public/Nav/Notion.svg";
 import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
 import Button from "../UI/Button/Button";
 
-function Nav() {
+function Nav({ showBorder }) {
   //Nav Elements
   const nav = [
     {
@@ -54,9 +54,14 @@ function Nav() {
       description: "Integrated AI assistant",
     },
   ];
+
+  const borderStyle = {
+    borderBottom: !showBorder ? "1px solid #e5e5e5" : "none",
+  };
   return (
     <div
-      className="nav-container"
+      className="nav-container "
+      style={borderStyle}
       onMouseLeave={() => {
         setActiveNav({ index: null, label: null });
       }}
